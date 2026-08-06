@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEXORA — Gear Up Your Setup</title>
+<meta name="description" content="NEXORA sells mechanical keyboards, mice, headsets, webcams and cables for gamers and creators.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">NEX<span>ORA</span></a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#shop">Shop</a>
+      <a href="#categories">Categories</a>
+      <a href="#why">Why Us</a>
+      <a href="#newsletter">Newsletter</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button id="rgbToggle" class="rgb-btn" title="Cycle RGB mode" aria-label="Cycle RGB accent color">
+        <span class="rgb-dot"></span> RGB
+      </button>
+      <button id="cartBtn" class="cart-btn" aria-label="Open cart">
+        🛒 <span id="cartCount" class="cart-count">0</span>
+      </button>
+      <button id="menuBtn" class="menu-btn" aria-label="Toggle menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <p class="eyebrow">// PERIPHERALS THAT PERFORM</p>
+    <h1 class="hero-title">
+      BUILD YOUR<br><span class="glow-text">DREAM SETUP</span>
+    </h1>
+    <p class="hero-sub">
+      Mechanical keyboards, precision mice, immersive audio and cables that don't
+      let you down mid-clutch. Hardware picked by people who actually use it.
+    </p>
+    <div class="hero-cta">
+      <a href="#shop" class="btn btn-primary">Shop the drop</a>
+      <a href="#categories" class="btn btn-ghost">Browse categories</a>
+    </div>
+    <div class="hero-stats">
+      <div><strong>4.8/5</strong><span>Avg. rating</span></div>
+      <div><strong>12k+</strong><span>Setups shipped</span></div>
+      <div><strong>2yr</strong><span>Warranty</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CATEGORIES ============ -->
+<section class="categories" id="categories">
+  <h2 class="section-title">Find your gear</h2>
+  <div class="cat-grid">
+    <button class="cat-card" data-filter="keyboard">
+      <span class="cat-icon">⌨️</span> Keyboards
+    </button>
+    <button class="cat-card" data-filter="mouse">
+      <span class="cat-icon">🖱️</span> Mice
+    </button>
+    <button class="cat-card" data-filter="audio">
+      <span class="cat-icon">🎧</span> Audio
+    </button>
+    <button class="cat-card" data-filter="cam">
+      <span class="cat-icon">📷</span> Webcams
+    </button>
+    <button class="cat-card" data-filter="cable">
+      <span class="cat-icon">🔌</span> Cables & Hubs
+    </button>
+    <button class="cat-card" data-filter="all">
+      <span class="cat-icon">✨</span> View All
+    </button>
+  </div>
+</section>
+
+<!-- ============ SHOP / PRODUCT GRID ============ -->
+<section class="shop" id="shop">
+  <div class="shop-head">
+    <h2 class="section-title">Featured drops</h2>
+    <p class="shop-sub">Filtered live — tap a category above, or a chip below.</p>
+  </div>
+
+  <div class="chip-row" id="chipRow">
+    <button class="chip active" data-filter="all">All</button>
+    <button class="chip" data-filter="keyboard">Keyboards</button>
+    <button class="chip" data-filter="mouse">Mice</button>
+    <button class="chip" data-filter="audio">Audio</button>
+    <button class="chip" data-filter="cam">Webcams</button>
+    <button class="chip" data-filter="cable">Cables</button>
+  </div>
+
+  <div class="product-grid" id="productGrid"><!-- injected by script.js --></div>
+</section>
+
+<!-- ============ WHY US ============ -->
+<section class="why" id="why">
+  <h2 class="section-title">Why NEXORA</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <span class="why-num">01</span>
+      <h3>Tested, not just listed</h3>
+      <p>Every product on this page gets bench-tested for latency, switch feel and build quality before it ships.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-num">02</span>
+      <h3>Fast, tracked shipping</h3>
+      <p>Orders leave the warehouse within 24 hours with real-time tracking — no mystery "processing" limbo.</p>
+    </div>
+    <div class="why-card">
+      <span class="why-num">03</span>
+      <h3>Real 2-year warranty</h3>
+      <p>Switches wear out, cables fray. We replace faulty gear without the 12-step support maze.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="newsletter" id="newsletter">
+  <div class="newsletter-inner">
+    <h2>Get drop alerts</h2>
+    <p>New restocks and limited RGB colorways, straight to your inbox. No spam, unsubscribe anytime.</p>
+    <form id="newsletterForm" class="newsletter-form">
+      <input type="email" id="newsletterEmail" placeholder="you@email.com" required>
+      <button type="submit" class="btn btn-primary">Notify me</button>
+    </form>
+    <p id="newsletterMsg" class="newsletter-msg" aria-live="polite"></p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <a href="#top" class="logo">NEX<span>ORA</span></a>
+      <p>Gear for people who build their own setup, one part at a time.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <a href="#shop">All products</a>
+      <a href="#categories">Categories</a>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#why">Why us</a>
+      <a href="#newsletter">Newsletter</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <a href="mailto:hello@nexora.example">hello@nexora.example</a>
+    </div>
+  </div>
+  <p class="footer-bottom">© <span id="year"></span> NEXORA. Demo storefront — no real payments are processed.</p>
+</footer>
+
+<!-- ============ CART DRAWER ============ -->
+<aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+  <div class="cart-head">
+    <h3>Your cart</h3>
+    <button id="closeCart" aria-label="Close cart">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-foot">
+    <div class="cart-total"><span>Total</span><strong id="cartTotal">$0.00</strong></div>
+    <button class="btn btn-primary cart-checkout" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+<div class="cart-overlay" id="cartOverlay"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
